@@ -168,7 +168,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &73958886
 GameObject:
@@ -312,7 +312,7 @@ Canvas:
   m_GameObject: {fileID: 83627429}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -336,7 +336,7 @@ RectTransform:
   m_Children:
   - {fileID: 615097024}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -506,48 +506,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &408050639
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &561523998
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,10 +689,10 @@ RectTransform:
   m_Father: {fileID: 83627433}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 43.88, y: 9.08}
-  m_SizeDelta: {x: -360.64, y: -443.26}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 43.880005, y: 9.080002}
+  m_SizeDelta: {x: 303.36, y: 164.73999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &615097025
 MonoBehaviour:
@@ -855,6 +813,7 @@ GameObject:
   - component: {fileID: 1021419339}
   - component: {fileID: 1021419338}
   - component: {fileID: 1021419342}
+  - component: {fileID: 1021419343}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -924,7 +883,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1021419342
 MonoBehaviour:
@@ -940,6 +899,26 @@ MonoBehaviour:
   panelLogin: {fileID: 615097023}
   inputUsr: {fileID: 1649326449}
   inputPwd: {fileID: 1146117697}
+  localPlayer: {fileID: 0}
+  otherClient: {fileID: 0}
+  socket: {fileID: 11400000, guid: b30cc084d923f0645b55bba668610d48, type: 2}
+--- !u!114 &1021419343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1021419337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 251dc7db9857fae4e8c9293b45173db2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  url: ws://127.0.0.1:8000/socket.io/?EIO=3&transport=websocket
+  autoConnect: 1
+  reconnectDelay: 5
+  ackExpirationTime: 30
+  pingInterval: 25
+  pingTimeout: 60
 --- !u!1 &1114992030
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,8 +1069,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1146117698}
   m_TextComponent: {fileID: 1010982958}
   m_Placeholder: {fileID: 614504298}
-  m_ContentType: 0
-  m_InputType: 0
+  m_ContentType: 7
+  m_InputType: 2
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
